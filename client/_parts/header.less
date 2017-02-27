@@ -1,0 +1,136 @@
+// .navbar-brand {
+// 	margin-top: -3px;
+// }
+.navbar.main-nav {
+	border-radius: 0;
+}
+.navbar-brand img {
+	height: 35px;
+	display: inline;
+	margin-top: -5px;
+}
+
+.navbar-inverse {
+	background-color: #003974;
+	border-color: #00468e;
+	color: white;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+	color: #fff;
+}
+
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus,
+.navbar .navbar-nav > li > a:hover {
+	color: #fff;
+	background-color: #002347;
+}
+
+.navbar .navbar-nav > li > a {
+
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;
+
+	:hover {
+		border-right: 1px solid #003974;
+		border-left: 1px solid #003974;
+	}
+
+}
+
+
+.color-strip {
+	height: 10px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	div {
+		display: block;
+		height: 100%;
+		width: 25%;
+		float: left;
+	}
+	.fteal {
+	    background-color: #00a651;
+	}
+
+	.fred {
+	    background-color: #ed1c24;
+	}
+
+	.fyellow {
+	    background-color: #f57e25;
+	}
+
+	.fblue {
+	    background-color: #009cd7;
+	}
+}
+//Helpers
+.position(@type; @top: auto; @right: auto; @bottom: auto; @left: auto; @width: auto; @height: auto) {
+	position: @type;
+	top: @top;
+	right: @right;
+	bottom: @bottom;
+	left: @left;
+	width: @width;
+	height: @height;
+}
+
+// Caps styling used in headers
+.title-caps() {
+	letter-spacing: .3em;
+	text-indent: .3em;
+	text-transform: uppercase;
+}
+.font-s1() {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.notifications {
+	.position(absolute, auto, auto, 10px, 50%, 280px);
+	transform: translate3d(-50%, 0, 0);
+	z-index: 1;
+
+	@media screen and (min-width: 40em) {
+		// When the screen is narrow, move the connection indicator
+		// to the bottom and center it.
+		transform: translate3d(0, 0, 0);
+		bottom: auto;
+		right: 1rem;
+		top: 7rem;
+		left: auto;
+	}
+
+	.notification {
+		.font-s1;
+		background: rgba(51,51,51, .85);
+		color: white;
+		margin-bottom: .25rem;
+		padding: .5rem .75rem;
+		position: relative;
+		width: 100%;
+
+		.icon-sync {
+			.position(absolute, 30%, auto, auto, 1rem);
+			color: white;
+			font-size: 1.5em;
+		}
+
+		.meta {
+			overflow: hidden;
+			padding-left: 3em;
+
+			.title-notification {
+				.title-caps;
+				display: block;
+			}
+
+			.description {
+				display: block;
+			}
+		}
+	}
+}

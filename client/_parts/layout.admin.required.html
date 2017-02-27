@@ -1,0 +1,21 @@
+<template name="layoutAdminRequired">
+	{{> header }}
+	<div class="flex">
+	{{> sAlert}}
+	{{#if authInProcess}}
+		<p>loading ...</p>
+	{{else}}
+		{{#if currentUser}}
+			{{#if isInRole 'admin'}}
+				{{>Template.dynamic template=content}}
+			{{else}}
+				{{> notAuth}}
+			{{/if}}
+		{{else}}
+			{{> login_required}}
+		{{/if}}
+	{{/if}}
+
+	</div>
+	{{> footer }}
+</template>

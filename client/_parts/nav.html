@@ -1,0 +1,30 @@
+<template name="nav">
+	<div id="navbar" class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+
+			<li class="{{ isActiveRoute '_home' }}">
+				<a href="{{pathFor 'home'}}" title="">Lorem ipsum</a>
+			</li>
+
+			{{#if currentUser }}
+
+			{{#if isInRole 'admin'}}
+			<li class="{{ isActiveRoute 'admin' }}">
+				<a href="{{pathFor 'admin'}}" title="Admin Dashboard" name="admin">Admin Dashboard</a>
+			</li>
+			{{else}}
+			<li class="{{ isActiveRoute 'userdash' }}">
+				<a href="{{pathFor 'userdash'}}" title="">Dashboard</a>
+			</li>
+			{{/if}}
+
+			{{/if}}
+
+
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+            {{> loginButtons}}
+        </ul>
+
+	</div><!--/.navbar-collapse -->
+</template>

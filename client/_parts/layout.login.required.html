@@ -1,0 +1,17 @@
+<template name="layoutLoginRequired">
+	{{> header }}
+	<div class="flex">
+	{{> sAlert}}
+	{{#if authInProcess}}
+		<p>loading ...</p>
+	{{else}}
+		{{#if currentUser}}
+			{{>Template.dynamic template=content}}
+		{{else}}
+			{{>login_required}}
+		{{/if}}
+	{{/if}}
+
+	</div>
+	{{> footer }}
+</template>

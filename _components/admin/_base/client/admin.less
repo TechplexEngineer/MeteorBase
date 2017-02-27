@@ -1,0 +1,49 @@
+@deep-blue: #3376A4;
+@light-blue: #4B89B2;
+@light-grey: #e6e6e6;
+
+.prinav {
+	background-color: @deep-blue;
+	padding: 5px 5px 0 5px;
+	border-radius: 5px 5px 0 0;
+
+	li > a {
+		background-color: @light-blue;
+		color: white;
+		border-bottom: 0px solid transparent;
+		margin-right: 5px;
+		&:hover, &:focus {
+			color: black;
+		}
+	}
+
+	li.active > a {
+		background-color: @light-grey;
+		border: 1px solid #ddd;
+		border-bottom-color: transparent;
+		cursor: default; //when the tab is active, not clickable
+		&:hover, &:focus {
+			background-color: @light-grey;
+		}
+	}
+}
+
+.subnav {
+	background-color: @light-grey;
+	padding: 5px;
+	border-radius: 0 0 5px 5px;
+
+	li > a {
+		margin-right: 5px;
+		&:hover {
+
+		}
+	}
+	li.active > a {
+		background-color: @light-blue;
+		&:hover {
+			background-color: @light-blue;
+			cursor: default;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<template name="admin">
+	<div class="container">
+
+		<div class="adminnav">
+			<ul class="nav nav-tabs prinav">
+			{{#each pages}}
+				<li class="{{isActiveParentRoute route}}" title="">
+					<a href="{{pathFor route}}" name="{{route}}">{{name}}</a>
+				</li>
+			{{/each}}
+			</ul>
+
+			<ul class="nav nav-pills subnav">
+				{{#each subpages}}
+				<li class="{{isActiveRoute route}}" title="">
+					<a href="{{pathFor route}}" name="{{route}}">{{name}}</a>
+				</li>
+				{{/each}}
+
+			</ul>
+		</div>
+
+		{{>Template.dynamic template=subcontent}}
+
+
+	</div>
+</template>

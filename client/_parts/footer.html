@@ -1,0 +1,19 @@
+<template name="footer">
+	<div class="container">
+		<hr>
+		<footer>
+			<p class="pull-right">
+				{{# if cfg.isTesting}}
+				TESTING v{{cfg.version}}
+				{{else}}
+				<span style="display: none">version={{cfg.version}}</span>
+				{{/if}}
+			</p>
+			<p>
+				<a href="/" target="_BLANK">{{cfg.sysname}}</a> built by
+				<a href="http://www.techwizworld.net/" target="_BLANK">Techplex Labs</a>
+				&copy; {{yearHelper}}
+			</p>
+		</footer>
+	</div>
+</template>
