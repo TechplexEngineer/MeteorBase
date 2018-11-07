@@ -36,7 +36,6 @@ aldeed:collection2-core@2.0.0
 aldeed:autoform-bs-datepicker@2.0.0
 aldeed:tabular
 dburles:collection-helpers
-ian:accounts-ui-bootstrap-3
 juliancwirko:s-alert-flip
 kadira:blaze-layout
 kadira:flow-router
@@ -49,3 +48,4 @@ twbs:bootstrap
 
 mdg:validation-error
 underscore
+techplex:accounts-ui-bootstrap-3
